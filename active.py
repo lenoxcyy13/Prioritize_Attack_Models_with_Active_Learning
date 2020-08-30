@@ -29,7 +29,7 @@ df_s = df.groupby('y(Port-Service)')['y_open_frequency'].mean()
 l_s = list(pd.DataFrame(df_s)['y_open_frequency'])
 s = sum(l_s)/len(l_s)
 
-#x_seriousness*y_open_frequency
+# x_seriousness*0.8 + y_open_frequency*0.2
 a = df['x_seriousness']
 b = list(df['y_open_frequency'])
 b = np.log10(b)
@@ -41,6 +41,7 @@ for i in range(len(a)):
         y_raw.append(0)
 
 
+# active learning
 X_raw = df.iloc[:,2:6].to_numpy()
 X_raw = preprocessing.scale(X_raw)
 y_raw = np.array(y_raw)

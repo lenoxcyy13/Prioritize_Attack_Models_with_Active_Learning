@@ -29,25 +29,6 @@ df_s = df.groupby('y(Port-Service)')['y_open_frequency'].mean()
 l_s = list(pd.DataFrame(df_s)['y_open_frequency'])
 s = sum(l_s)/len(l_s)
 
-
-'''
-service = df['y_open_frequency'].sort_values()
-s = list(service)
-l_log = np.log10(s)
-plt.plot(l_log)
-plt.show()
-'''
-
-'''
-#x_seriousness
-a = df['x_seriousness']
-y_raw = []
-for i in range(len(a)):
-    if a[i] > np.mean(17):
-        y_raw.append(1)
-    else:
-        y_raw.append(0)
-'''
 #x_seriousness*y_open_frequency
 a = df['x_seriousness']
 b = list(df['y_open_frequency'])

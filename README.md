@@ -1,4 +1,4 @@
 # Prioritize Attack Models with Active Learning
 When visualizing the attack models on a 2-dimensional feature space (the bubble plot where each bubble is a model), it will be helpful to rank the feature importance in x and y-axes so that the critical models are shown in the top-right quadrant. This ranking or sorting must take analysts' interpretation on which models are critical. This summer research looks into this problem by applying active learning to learn synthetically generated user interpretation of model criticality and use the learned prediction to sort the attack stage and port-service features to present the models better reflecting users' interpretation of the model criticality.
 
-For the active learning part, I refer and study from this website. https://modal-python.readthedocs.io/en/latest/content/examples/pool-based_sampling.html
+The website that I take reference for active learning. https://modal-python.readthedocs.io/en/latest/content/examples/pool-based_sampling.html
